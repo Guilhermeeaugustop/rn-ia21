@@ -6,13 +6,14 @@ import { GestureResponderEvent } from "react-native";
 
 type Props = {
     label: string,
+    variant?: "primary" | "secondary" | "outline"
     onPress? : (event: GestureResponderEvent) => void
 }
 
-export function Botao({label, onPress} : Props) {
+export function Botao({label, variant = "primary", onPress} : Props) {
     return(
-    <TouchableOpacity style={styles.buttonContainer}>
-        <Text style={styles.buttonText}>
+    <TouchableOpacity style={styles[variant].buttonContainer} onPress={onPress}>
+        <Text style={styles[variant].buttonText}>
             {label}
         </Text>
     </TouchableOpacity>

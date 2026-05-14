@@ -3,6 +3,8 @@ export const PRIMARY_FOREGROUND_COLOR = "#ffffff";
 export const SUBTITLE_COLOR = "#645664";
 export const BORDER_RADIUS_MD = 8;
 export const BORDER_RADIUS_LG = 12;
+export const BORDER_RADIUS_XLG = 16;
+export const BORDER_RADIUS_XXLG = 20;
 
 export const THEME = {
     colors: {
@@ -14,6 +16,8 @@ export const THEME = {
         radius: {
             md: BORDER_RADIUS_MD,
             lg: BORDER_RADIUS_LG,
+            xlg: BORDER_RADIUS_XLG,
+            xxlg: BORDER_RADIUS_XXLG
         }
     }
 }
