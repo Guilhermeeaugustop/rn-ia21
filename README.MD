@@ -17,16 +17,16 @@ Lógica Condicional de Interface: O layout do cartão se adapta às entradas do 
 # print
 
 tela index Boas-vindas : 
-![alt text](image.png)
+![alt text](./img/image.png)
 
 tela Cadastro (errors): 
-![alt text](image-1.png)
+![alt text](./img/image-1.png)
 
 tela Cadastro :
-![alt text](image-2.png)
+![alt text](./img/image-2.png)
 
 tela Preview : 
-![alt text](image-4.png)
+![alt text](./img/image-4.png)
 
 tela Sucesso : 
-![alt text](image-5.png)
+![alt text](./img/image-5.png)
