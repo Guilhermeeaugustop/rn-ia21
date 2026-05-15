@@ -2,8 +2,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { View,Text, TouchableOpacity, StyleSheet } from "react-native";
 import { THEME } from "../styles/constants";
 import { Botao } from "../components/Buttons";
+import { useRouter } from "expo-router";
 
 export default function sucessoScreen() {
+
+    const router = useRouter()
     return(
         <SafeAreaView>
             <View style={styles.container}>
@@ -13,8 +16,8 @@ export default function sucessoScreen() {
                 </View>
             
                 <View style={styles.footerContainer}>
-                    <Botao  label="Criar outro Cartão" variant="primary"/>
-                    <Botao label="Voltar ao inicio" variant="secondary"/>
+                    <Botao  label="Criar outro Cartão" variant="primary" onPress={() => router.push('/cadastro')}/>
+                    <Botao label="Voltar ao inicio" variant="secondary" onPress={() => router.replace('/')}/>
                 </View>
 
             </View>

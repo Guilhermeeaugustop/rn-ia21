@@ -2,8 +2,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { View,Text, TouchableOpacity, StyleSheet } from "react-native";
 import { THEME } from "../styles/constants";
 import { Botao } from "../components/Buttons";
+import { useRouter } from "expo-router";
 
 export default function HomeScreen() {
+
+    const router = useRouter()
+
     return(
         <SafeAreaView>
             <View style={styles.container}>
@@ -12,7 +16,7 @@ export default function HomeScreen() {
                 <Text style={styles.subtutle}>Seu cartão de visita digital de dev mobile</Text>
                 </View>
             
-                <Botao label="Criar meu Cartão"/>
+                <Botao label="Criar meu Cartão" onPress={() => router.push("/cadastro")}/>
                 
             </View>
         </SafeAreaView>

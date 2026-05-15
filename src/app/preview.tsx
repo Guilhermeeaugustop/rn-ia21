@@ -3,8 +3,15 @@ import { View,Text, TouchableOpacity, StyleSheet } from "react-native";
 import { THEME } from "../styles/constants";
 import { Botao } from "../components/Buttons";
 import { DevCard } from "../components/DevCard";
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { Form } from "./cadastro";
 
 export default function previewScreen() {
+
+    const router = useRouter()
+
+    const params = useLocalSearchParams() as unknown as Form
+
     return(
         <SafeAreaView>
             <View style={styles.container}>
@@ -13,11 +20,12 @@ export default function previewScreen() {
                 
                 </View>
 
-                <DevCard/>
+                {!!params && <DevCard data={params}/>}
             
                 <View style={styles.footerContainer}>
-                    <Botao  label="Editar" variant="outline"/>
-                    <Botao label="Finalizar"/>
+                    <Botao  label="Editar" variant="outline" onPress={() => router.push("/cadastro")}/>
+                    <Botao label="Finalizar"
+                    onPress={() => router.push("/sucesso")}/>
                 </View>
 
             </View>
